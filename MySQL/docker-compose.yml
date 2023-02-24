@@ -6,8 +6,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_DB_USER_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     container_name: ${MYSQL_DB_NAME}
     ports:
-      - 3306:3306
+      - ${MYSQL_PORT}:3306
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./db-volume:/var/lib/mysql

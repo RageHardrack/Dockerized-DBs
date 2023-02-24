@@ -1,0 +1,9 @@
+# Environments
+*/.env
+.env
+*.local
+
+.git
+
+# Volumes
+*/db-volume/
